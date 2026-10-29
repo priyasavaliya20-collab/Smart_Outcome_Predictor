@@ -35,22 +35,24 @@ The task is to prepare the data, build bagging models, implement and analyse **A
 
 ## 🛠 Tools Used
 
+
 <div>
 
-<img src="https://img.shields.io/badge/Python-8B5CF6?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Jupyter%20Notebook-5B21B6?style=for-the-badge&logo=jupyter&logoColor=white"/>
-<img src="https://img.shields.io/badge/Pandas-A78BFA?style=for-the-badge&logo=pandas&logoColor=white"/>
-<img src="https://img.shields.io/badge/NumPy-6D28D9?style=for-the-badge&logo=numpy&logoColor=white"/>
-<img src="https://img.shields.io/badge/scikit--learn-7C3AED?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
-<img src="https://img.shields.io/badge/Matplotlib-7B2CBF?style=for-the-badge&logo=matplotlib&logoColor=white"/>
-<img src="https://img.shields.io/badge/XGBoost-4B1D7F?style=for-the-badge&logo=xgboost&logoColor=white"/>
-<img src="https://img.shields.io/badge/LightGBM-9333EA?style=for-the-badge&logo=lightgbm&logoColor=white"/>
-<img src="https://img.shields.io/badge/Bagging-6A0DAD?style=for-the-badge&logoColor=white"/>
-<img src="https://img.shields.io/badge/Boosting-9575CD?style=for-the-badge&logoColor=white"/>
-<img src="https://img.shields.io/badge/Voting-8E44AD?style=for-the-badge&logoColor=white"/>
-<img src="https://img.shields.io/badge/Stacking-7E57C2?style=for-the-badge&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-1D407D?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Jupyter%20Notebook-1260A8?style=for-the-badge&logo=jupyter&logoColor=white"/>
+<img src="https://img.shields.io/badge/Pandas-4295F0?style=for-the-badge&logo=pandas&logoColor=white"/>
+<img src="https://img.shields.io/badge/NumPy-1D407D?style=for-the-badge&logo=numpy&logoColor=white"/>
+<img src="https://img.shields.io/badge/scikit--learn-1260A8?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
+<img src="https://img.shields.io/badge/Matplotlib-4295F0?style=for-the-badge&logo=matplotlib&logoColor=white"/>
+<img src="https://img.shields.io/badge/XGBoost-1D407D?style=for-the-badge&logo=xgboost&logoColor=white"/>
+<img src="https://img.shields.io/badge/LightGBM-1260A8?style=for-the-badge&logo=lightgbm&logoColor=white"/>
+<img src="https://img.shields.io/badge/Bagging-4295F0?style=for-the-badge&logoColor=white"/>
+<img src="https://img.shields.io/badge/Boosting-91C8F5?style=for-the-badge&logoColor=1D407D"/>
+<img src="https://img.shields.io/badge/Voting-1260A8?style=for-the-badge&logoColor=white"/>
+<img src="https://img.shields.io/badge/Stacking-1D407D?style=for-the-badge&logoColor=white"/>
 
 </div>
+
 
 ---
 
@@ -574,4 +576,4 @@ Your feedback, suggestions, and contributions are always welcome.
 
 ⭐ If you found this project helpful, don't forget to star the repository and share it with others.
 
-shruti bhawsar
+priya savaliya 
