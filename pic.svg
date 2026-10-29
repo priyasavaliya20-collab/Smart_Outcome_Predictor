@@ -25,14 +25,14 @@
       .font{font-family:Arial,Helvetica,sans-serif}
       .eyebrow{font-size:11px;font-weight:700;letter-spacing:1.8px}
       .small{font-size:9px;font-weight:700;letter-spacing:1px}
-      .flow{stroke-dasharray:5 7;animation:flow 3.5s linear infinite}
+      .flow{stroke-dasharray:5 7;animation:flow 3s linear infinite}
       .float{animation:float 3s ease-in-out infinite}
       .float2{animation:float 3.7s ease-in-out infinite reverse}
-      .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2s ease-in-out infinite}
+      .pulse{animation:pulse 2s ease-in-out infinite}
       .blink{animation:blink 1.8s ease-in-out infinite}
       @keyframes flow{to{stroke-dashoffset:-48}}
       @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-      @keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+      @keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
       @keyframes blink{0%,100%{opacity:.35}50%{opacity:1}}
     </style>
   </defs>
@@ -45,152 +45,127 @@
   <rect x="45" y="39" width="111" height="5" rx="2.5" fill="#1d3f73"/>
   <text class="font eyebrow" x="47" y="77" fill="#28518b">ENSEMBLE LEARNING</text>
 
-  <text class="font" x="45" y="119" font-size="34" font-weight="800" fill="#17191d">Part C: Bagging</text>
-  <text class="font" x="45" y="153" font-size="21" font-weight="750" fill="#17191d">(Bootstrap Aggregating)</text>
+  <text class="font" x="45" y="123" font-size="35" font-weight="800" fill="#17191d">Part D:</text>
+  <text class="font" x="45" y="162" font-size="33" font-weight="800" fill="#17191d">Boosting</text>
+  <text class="font" x="45" y="197" font-size="33" font-weight="800" fill="#17191d">Algorithms</text>
 
-  <text class="font" x="46" y="190" font-size="14" fill="#4c5564">Train multiple models on bootstrap samples.</text>
-  <text class="font" x="46" y="212" font-size="14" fill="#4c5564">Combine predictions for a more stable result.</text>
+  <text class="font" x="46" y="230" font-size="14" fill="#4c5564">Learn sequentially from previous model errors.</text>
+  <text class="font" x="46" y="251" font-size="14" fill="#4c5564">Combine weak learners into a stronger model.</text>
 
-  <!-- CONCEPT CARD -->
+  <!-- BOOSTING CONCEPT CARD -->
   <g filter="url(#shadow)">
-    <rect x="45" y="239" width="490" height="111" rx="17" fill="#fff" stroke="#25364c" stroke-width="1.4"/>
-    <rect x="45" y="239" width="6" height="111" rx="3" fill="#28518b"/>
+    <rect x="45" y="275" width="490" height="92" rx="17" fill="#fff" stroke="#25364c" stroke-width="1.4"/>
+    <rect x="45" y="275" width="6" height="92" rx="3" fill="#28518b"/>
   </g>
-  <text class="font small" x="70" y="264" fill="#7b8492">BAGGING WORKFLOW</text>
-  <text class="font" x="70" y="295" font-size="20" font-weight="750" fill="#172235">Sample → Train → Aggregate</text>
-  <text class="font" x="70" y="320" font-size="13" fill="#667080">Parallel learners produce one combined prediction.</text>
+  <text class="font small" x="70" y="299" fill="#7b8492">SEQUENTIAL LEARNING</text>
+  <text class="font" x="70" y="329" font-size="20" font-weight="750" fill="#172235">Learn → Correct → Improve</text>
+  <text class="font" x="70" y="350" font-size="13" fill="#667080">Each stage helps refine the ensemble prediction.</text>
 
-  <!-- WORKFLOW TRACK -->
+  <!-- LEFT PROGRESS TRACK -->
   <g class="font small" fill="#7b8492">
-    <text x="46" y="382">SAMPLE</text>
-    <text x="175" y="382">TRAIN</text>
-    <text x="307" y="382">COMBINE</text>
-    <text x="446" y="382">PREDICT</text>
+    <text x="46" y="399">BASE MODEL</text>
+    <text x="180" y="399">ERROR</text>
+    <text x="302" y="399">REFINE</text>
+    <text x="440" y="399">RESULT</text>
   </g>
-  <path d="M55 413H477" stroke="#9aafd0" stroke-width="2" stroke-linecap="round"/>
-  <path class="flow" d="M55 413H477" stroke="#28518b" stroke-width="2.2" fill="none"/>
-  <circle cx="55" cy="413" r="8" fill="#fff" stroke="#28518b" stroke-width="2.4"/>
-  <circle cx="185" cy="413" r="8" fill="#28518b"/>
-  <circle cx="321" cy="413" r="8" fill="#28518b"/>
-  <circle cx="477" cy="413" r="8" fill="#fff" stroke="#28518b" stroke-width="2.4"/>
-  <circle class="pulse" cx="119" cy="413" r="4" fill="#83b5ff"/>
-  <circle class="pulse" cx="253" cy="413" r="4" fill="#83b5ff"/>
-  <circle class="pulse" cx="399" cy="413" r="4" fill="#83b5ff"/>
+  <path d="M55 429H477" stroke="#9aafd0" stroke-width="2" stroke-linecap="round"/>
+  <path class="flow" d="M55 429H477" stroke="#28518b" stroke-width="2.2" fill="none"/>
+  <circle cx="55" cy="429" r="8" fill="#fff" stroke="#28518b" stroke-width="2.4"/>
+  <circle cx="185" cy="429" r="8" fill="#28518b"/>
+  <circle cx="321" cy="429" r="8" fill="#28518b"/>
+  <circle cx="477" cy="429" r="8" fill="#fff" stroke="#28518b" stroke-width="2.4"/>
+  <circle class="pulse" cx="119" cy="429" r="4" fill="#83b5ff"/>
+  <circle class="pulse" cx="253" cy="429" r="4" fill="#83b5ff"/>
+  <circle class="pulse" cx="399" cy="429" r="4" fill="#83b5ff"/>
 
-  <!-- RIGHT PANEL -->
+  <!-- RIGHT DARK PANEL -->
   <rect x="583" y="38" width="574" height="424" rx="28" fill="url(#navy)" stroke="#28518b" stroke-width="1.8"/>
+  <text class="font eyebrow" x="615" y="75" fill="#a8c7f5">BOOSTING ENGINE / 04</text>
+  <text class="font" x="615" y="106" font-size="24" font-weight="800" fill="#fff">Errors Drive Improvement</text>
+  <text class="font" x="615" y="128" font-size="12" fill="#b7c0cf">Sequential learners · Error correction · Final model</text>
 
-  <text class="font eyebrow" x="615" y="75" fill="#a8c7f5">ENSEMBLE ENGINE / 03</text>
-  <text class="font" x="615" y="106" font-size="24" font-weight="800" fill="#fff">Bootstrap Aggregating</text>
-  <text class="font" x="615" y="128" font-size="12" fill="#b7c0cf">Independent models · Combined prediction</text>
-
-  <!-- ORIGINAL DATASET -->
-  <rect x="614" y="157" width="100" height="103" rx="11" fill="#101c2e" stroke="#426da9" stroke-width="1.3"/>
-  <text class="font small" x="626" y="176" fill="#a9c7f5">DATASET</text>
-  <g fill="#dceaff">
-    <rect x="627" y="189" width="70" height="4" rx="2"/>
-    <rect x="627" y="201" width="53" height="4" rx="2"/>
-    <rect x="627" y="213" width="64" height="4" rx="2"/>
-    <rect x="627" y="225" width="44" height="4" rx="2"/>
-    <rect x="627" y="237" width="61" height="4" rx="2"/>
-    <rect x="627" y="249" width="48" height="4" rx="2"/>
-  </g>
-
-  <!-- BRANCHING DATA FLOW -->
-  <path d="M714 208H735V174H751M735 208V226H751M735 208V278H751"
-        fill="none" stroke="#557db5" stroke-width="1.5"/>
-  <path class="flow" d="M714 208H735V174H751M735 208V226H751M735 208V278H751"
-        fill="none" stroke="#83b5ff" stroke-width="1.6"/>
-  <path d="M735 208l-4 -5v10z" fill="#83b5ff"/>
-
-  <!-- BOOTSTRAP SAMPLE CARDS -->
-  <g>
-    <rect x="751" y="153" width="91" height="42" rx="8" fill="#172b47" stroke="#4779c0"/>
-    <rect x="751" y="208" width="91" height="42" rx="8" fill="#172b47" stroke="#4779c0"/>
-    <rect x="751" y="263" width="91" height="42" rx="8" fill="#172b47" stroke="#4779c0"/>
-
-    <text class="font" x="796.5" y="169" text-anchor="middle" font-size="8" font-weight="700" fill="#a9c7f5">SAMPLE 1</text>
-    <text class="font" x="796.5" y="184" text-anchor="middle" font-size="10" fill="#fff">A B A C</text>
-
-    <text class="font" x="796.5" y="224" text-anchor="middle" font-size="8" font-weight="700" fill="#a9c7f5">SAMPLE 2</text>
-    <text class="font" x="796.5" y="239" text-anchor="middle" font-size="10" fill="#fff">B D A B</text>
-
-    <text class="font" x="796.5" y="279" text-anchor="middle" font-size="8" font-weight="700" fill="#a9c7f5">SAMPLE 3</text>
-    <text class="font" x="796.5" y="294" text-anchor="middle" font-size="10" fill="#fff">C A D C</text>
-  </g>
-
-  <!-- CONNECT SAMPLES TO LEARNERS -->
-  <path class="flow" d="M842 174H873M842 229H873M842 284H873"
-        fill="none" stroke="#83b5ff" stroke-width="1.7"/>
-  <circle class="pulse" cx="856" cy="174" r="3" fill="#fff"/>
-  <circle class="pulse" cx="856" cy="229" r="3" fill="#fff"/>
-  <circle class="pulse" cx="856" cy="284" r="3" fill="#fff"/>
-
-  <!-- DECISION TREE 1 -->
+  <!-- STAGE 1 -->
   <g class="float">
-    <g transform="translate(889 158)">
-      <path d="M0 0L-12 13H12Z" fill="url(#blue)" stroke="#c6dcff"/>
-      <path d="M-12 13L-20 26M12 13L20 26" stroke="#a9c7f5" stroke-width="1.5" fill="none"/>
-      <rect x="-26" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
-      <rect x="14" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
-    </g>
+    <rect x="615" y="158" width="137" height="104" rx="12" fill="#101c2e" stroke="#426da9" stroke-width="1.3"/>
+    <rect x="615" y="158" width="137" height="27" rx="10" fill="#1b3558"/>
+    <text class="font small" x="628" y="176" fill="#dceaff">STAGE 01</text>
+    <path d="M650 198L634 219H666Z" fill="url(#blue)" stroke="#b7d2ff"/>
+    <path d="M634 219L627 233M666 219L673 233" fill="none" stroke="#a9c7f5" stroke-width="1.5"/>
+    <rect x="621" y="233" width="12" height="8" rx="2" fill="#28518b" stroke="#83b5ff"/>
+    <rect x="667" y="233" width="12" height="8" rx="2" fill="#28518b" stroke="#83b5ff"/>
+    <text class="font" x="685" y="213" font-size="10" font-weight="700" fill="#fff">BASE</text>
+    <text class="font" x="685" y="227" font-size="10" font-weight="700" fill="#fff">MODEL</text>
+    <text class="font" x="628" y="252" font-size="9" fill="#a9c7f5">Initial prediction</text>
   </g>
 
-  <!-- DECISION TREE 2 -->
+  <!-- STAGE 1 TO ERROR -->
+  <path class="flow" d="M752 208H773" fill="none" stroke="#83b5ff" stroke-width="2"/>
+  <path d="M769 203L776 208L769 213" fill="none" stroke="#83b5ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ERROR / RESIDUAL -->
+  <rect x="777" y="158" width="106" height="104" rx="12" fill="#101c2e" stroke="#426da9" stroke-width="1.3"/>
+  <text class="font small" x="790" y="178" fill="#a9c7f5">ERROR</text>
+  <g transform="translate(830 208)">
+    <path d="M-22 0H22" stroke="#617fa8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M0 -22V22" stroke="#617fa8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M-15 -13L15 13M15 -13L-15 13" stroke="#83b5ff" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="5" fill="#fff" filter="url(#glow)"/>
+  </g>
+  <text class="font" x="830" y="246" text-anchor="middle" font-size="9" fill="#dceaff">Find mistakes</text>
+
+  <!-- ERROR TO NEXT LEARNER -->
+  <path class="flow" d="M883 208H905" fill="none" stroke="#83b5ff" stroke-width="2"/>
+  <path d="M901 203L908 208L901 213" fill="none" stroke="#83b5ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- STAGE 2 -->
   <g class="float2">
-    <g transform="translate(889 213)">
-      <path d="M0 0L-12 13H12Z" fill="url(#blue)" stroke="#c6dcff"/>
-      <path d="M-12 13L-20 26M12 13L20 26" stroke="#a9c7f5" stroke-width="1.5" fill="none"/>
-      <rect x="-26" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
-      <rect x="14" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
-    </g>
+    <rect x="909" y="158" width="99" height="104" rx="12" fill="#101c2e" stroke="#426da9" stroke-width="1.3"/>
+    <text class="font small" x="922" y="178" fill="#a9c7f5">STAGE 02</text>
+    <path d="M958 190L942 211H974Z" fill="url(#blue)" stroke="#b7d2ff"/>
+    <path d="M942 211L935 224M974 211L981 224" fill="none" stroke="#a9c7f5" stroke-width="1.5"/>
+    <rect x="929" y="224" width="12" height="8" rx="2" fill="#28518b" stroke="#83b5ff"/>
+    <rect x="975" y="224" width="12" height="8" rx="2" fill="#28518b" stroke="#83b5ff"/>
+    <text class="font" x="958" y="247" text-anchor="middle" font-size="9" fill="#dceaff">Correct errors</text>
   </g>
 
-  <!-- DECISION TREE 3 -->
+  <!-- STAGE 2 TO FINAL -->
+  <path class="flow" d="M1008 208H1030" fill="none" stroke="#83b5ff" stroke-width="2"/>
+  <path d="M1026 203L1033 208L1026 213" fill="none" stroke="#83b5ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- FINAL BOOSTED MODEL -->
+  <rect x="1034" y="158" width="96" height="104" rx="12" fill="#172b47" stroke="#83b5ff" stroke-width="1.4"/>
   <g class="float">
-    <g transform="translate(889 268)">
-      <path d="M0 0L-12 13H12Z" fill="url(#blue)" stroke="#c6dcff"/>
-      <path d="M-12 13L-20 26M12 13L20 26" stroke="#a9c7f5" stroke-width="1.5" fill="none"/>
-      <rect x="-26" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
-      <rect x="14" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
-    </g>
+    <path d="M1082 181L1065 202H1099Z" fill="url(#blue)" stroke="#d2e4ff"/>
+    <path d="M1065 202L1058 215M1099 202L1106 215" fill="none" stroke="#b7d2ff" stroke-width="1.5"/>
+    <rect x="1052" y="215" width="12" height="8" rx="2" fill="#28518b" stroke="#83b5ff"/>
+    <rect x="1100" y="215" width="12" height="8" rx="2" fill="#28518b" stroke="#83b5ff"/>
   </g>
+  <text class="font" x="1082" y="240" text-anchor="middle" font-size="9" font-weight="700" fill="#dceaff">BOOSTED</text>
+  <text class="font" x="1082" y="252" text-anchor="middle" font-size="9" font-weight="700" fill="#dceaff">MODEL</text>
 
-  <!-- LEARNER OUTPUTS TO AGGREGATION -->
-  <path d="M915 184H936V226M915 239H936V226M915 294H936V226H953"
-        fill="none" stroke="#557db5" stroke-width="1.5"/>
-  <path class="flow" d="M915 184H936V226M915 239H936V226M915 294H936V226H953"
-        fill="none" stroke="#83b5ff" stroke-width="1.6"/>
-  <circle class="pulse" cx="936" cy="226" r="4" fill="#fff" filter="url(#glow)"/>
+  <!-- ITERATION INDICATOR -->
+  <path d="M958 272V289H830V272" fill="none" stroke="#557db5" stroke-width="1.3"/>
+  <path class="flow" d="M958 272V289H830V272" fill="none" stroke="#83b5ff" stroke-width="1.5"/>
+  <path d="M825 278L830 271L835 278" fill="none" stroke="#83b5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="font" x="894" y="303" text-anchor="middle" font-size="9" letter-spacing="1" fill="#a9c7f5">ITERATIVE IMPROVEMENT</text>
 
-  <!-- AGGREGATION BLOCK: RECTANGULAR, NO ORBIT -->
-  <rect x="953" y="196" width="54" height="60" rx="9" fill="#172b47" stroke="#83b5ff" stroke-width="1.4"/>
-  <g stroke="#e5efff" stroke-width="2.5" stroke-linecap="round">
-    <path d="M966 214H994"/>
-    <path d="M966 226H994"/>
-    <path d="M966 238H994"/>
-  </g>
-  <path class="flow" d="M1007 226H1022" stroke="#83b5ff" stroke-width="2" fill="none"/>
+  <!-- BOTTOM ALGORITHM STRIP -->
+  <rect x="615" y="322" width="515" height="58" rx="11" fill="#101c2e" stroke="#355b91" stroke-width="1.2"/>
+  <text class="font small" x="631" y="342" fill="#a9c7f5">BOOSTING FAMILY</text>
 
-  <!-- FINAL PREDICTION -->
-  <rect x="1022" y="183" width="108" height="86" rx="12" fill="#101c2e" stroke="#4779c0" stroke-width="1.3"/>
-  <g class="float">
-    <circle cx="1076" cy="207" r="13" fill="#244d83"/>
-    <path d="M1069 207L1074 212L1083 202" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text class="font" x="1076" y="235" text-anchor="middle" font-size="9" font-weight="700" fill="#a9c7f5">FINAL</text>
-  <text class="font" x="1076" y="249" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">PREDICTION</text>
-  <text class="font" x="1076" y="261" text-anchor="middle" font-size="7.5" fill="#a9c7f5">VOTE / AVERAGE</text>
+  <rect x="631" y="351" width="101" height="19" rx="5" fill="#1c3658" stroke="#426da9"/>
+  <text class="font" x="681.5" y="364" text-anchor="middle" font-size="10" font-weight="700" fill="#e4efff">AdaBoost</text>
 
-  <!-- STATUS CARD -->
-  <rect x="614" y="329" width="516" height="48" rx="10" fill="#101c2e" stroke="#355b91" stroke-width="1.2"/>
-  <circle cx="634" cy="352" r="7" fill="#244d83"/>
-  <path d="M630 352L633 355L638 348" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
-  <text class="font small" x="649" y="349" fill="#a9c7f5">ENSEMBLE STATUS</text>
-  <text class="font" x="649" y="365" font-size="12" font-weight="800" fill="#fff">MULTIPLE LEARNERS COMBINED</text>
+  <rect x="741" y="351" width="115" height="19" rx="5" fill="#1c3658" stroke="#426da9"/>
+  <text class="font" x="798.5" y="364" text-anchor="middle" font-size="10" font-weight="700" fill="#e4efff">Gradient Boosting</text>
 
-  <!-- FOOTER -->
-  <text class="font" x="614" y="419" font-size="9" letter-spacing=".8" fill="#8398b8">BOOTSTRAP SAMPLES · DECISION TREES · AGGREGATION</text>
-  <path class="flow" d="M1005 419H1125" fill="none" stroke="#4779c0" stroke-width="1.5"/>
-  <circle class="pulse" cx="1125" cy="419" r="3" fill="#83b5ff" filter="url(#glow)"/>
+  <rect x="865" y="351" width="79" height="19" rx="5" fill="#1c3658" stroke="#426da9"/>
+  <text class="font" x="904.5" y="364" text-anchor="middle" font-size="10" font-weight="700" fill="#e4efff">XGBoost</text>
+
+  <rect x="953" y="351" width="79" height="19" rx="5" fill="#1c3658" stroke="#426da9"/>
+  <text class="font" x="992.5" y="364" text-anchor="middle" font-size="10" font-weight="700" fill="#e4efff">LightGBM</text>
+
+  <text class="font" x="615" y="420" font-size="9.5" letter-spacing=".8" fill="#8398b8">SEQUENTIAL LEARNING · ERROR CORRECTION · ENSEMBLE MODEL</text>
+  <path class="flow" d="M1015 420H1128" fill="none" stroke="#4779c0" stroke-width="1.5"/>
+  <circle class="pulse" cx="1128" cy="420" r="3" fill="#83b5ff" filter="url(#glow)"/>
 </svg>
