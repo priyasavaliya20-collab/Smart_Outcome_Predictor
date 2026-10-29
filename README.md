@@ -27,7 +27,6 @@ The task is to prepare the data, build bagging models, implement and analyse **A
 | 📓 `Smart_Outcome_Predictor_Fixed_1.ipynb` | Main notebook — the complete, annotated bagging, boosting, voting, stacking and model-comparison pipeline |
 | 📊 `Smart_Outcome_Predictor_Dataset_5200.csv.csv` | Raw student dataset (5,200 records) |
 | 📘 `README.md` | Project documentation and workflow guide |
-| 📂 `Visuals` | Folder of the output visuals/graphs |
 | 📄 `Part_A_Conceptual_Foundation_Theory.pdf` | Project documentation of Part A (Theory) |
 | 📋 `Part_G_Final_Analysis_Reporting_Report.pdf` | Report documentation of Part G (Final Report) |
 
