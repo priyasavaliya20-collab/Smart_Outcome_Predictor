@@ -12,10 +12,10 @@
       <stop offset="1" stop-color="#28518b"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#142642" flood-opacity=".16"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#142642" flood-opacity=".18"/>
     </filter>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -23,21 +23,17 @@
     </filter>
     <style>
       .font{font-family:Arial,Helvetica,sans-serif}
-      .eyebrow{font-size:12px;font-weight:700;letter-spacing:2.1px}
-      .small{font-size:10px;font-weight:700;letter-spacing:1.2px}
+      .eyebrow{font-size:11px;font-weight:700;letter-spacing:1.8px}
+      .small{font-size:9px;font-weight:700;letter-spacing:1px}
+      .flow{stroke-dasharray:5 7;animation:flow 3.5s linear infinite}
       .float{animation:float 3s ease-in-out infinite}
-      .float2{animation:float 3.8s ease-in-out infinite reverse}
-      .spin{transform-origin:850px 230px;animation:spin 12s linear infinite}
-      .spinback{transform-origin:850px 230px;animation:spinback 17s linear infinite}
-      .flow{stroke-dasharray:5 7;animation:flow 4s linear infinite}
+      .float2{animation:float 3.7s ease-in-out infinite reverse}
       .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2s ease-in-out infinite}
-      .shine{animation:shine 2s ease-in-out infinite}
-      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-      @keyframes spin{to{transform:rotate(360deg)}}
-      @keyframes spinback{to{transform:rotate(-360deg)}}
+      .blink{animation:blink 1.8s ease-in-out infinite}
       @keyframes flow{to{stroke-dashoffset:-48}}
-      @keyframes pulse{0%,100%{transform:scale(.8);opacity:.65}50%{transform:scale(1.25);opacity:1}}
-      @keyframes shine{0%,100%{opacity:.45}50%{opacity:1}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+      @keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+      @keyframes blink{0%,100%{opacity:.35}50%{opacity:1}}
     </style>
   </defs>
 
@@ -45,166 +41,156 @@
   <rect x="1" y="1" width="1198" height="498" rx="29" fill="#fff" stroke="#202020" stroke-width="2"/>
   <rect x="2" y="2" width="1196" height="496" rx="28" fill="url(#grid)"/>
 
-  <!-- LEFT: TITLE -->
+  <!-- LEFT TITLE -->
   <rect x="45" y="39" width="111" height="5" rx="2.5" fill="#1d3f73"/>
-  <text class="font eyebrow" x="47" y="77" fill="#28518b">MACHINE LEARNING PROJECT</text>
+  <text class="font eyebrow" x="47" y="77" fill="#28518b">ENSEMBLE LEARNING</text>
 
-  <text class="font" x="45" y="121" font-size="33" font-weight="800" fill="#17191d">Part B:</text>
-  <text class="font" x="45" y="160" font-size="29" font-weight="800" fill="#17191d">Dataset Understanding</text>
-  <text class="font" x="45" y="195" font-size="29" font-weight="800" fill="#17191d">&amp; Preparation</text>
+  <text class="font" x="45" y="119" font-size="34" font-weight="800" fill="#17191d">Part C: Bagging</text>
+  <text class="font" x="45" y="153" font-size="21" font-weight="750" fill="#17191d">(Bootstrap Aggregating)</text>
 
-  <text class="font" x="46" y="225" font-size="14" fill="#626c7b">Explore, clean and prepare the data.</text>
-  <text class="font" x="46" y="246" font-size="14" fill="#626c7b">Build a reliable foundation for ML models.</text>
+  <text class="font" x="46" y="190" font-size="14" fill="#4c5564">Train multiple models on bootstrap samples.</text>
+  <text class="font" x="46" y="212" font-size="14" fill="#4c5564">Combine predictions for a more stable result.</text>
 
-  <!-- DATA PREPARATION CARD -->
+  <!-- CONCEPT CARD -->
   <g filter="url(#shadow)">
-    <rect x="45" y="267" width="490" height="100" rx="17" fill="#fff" stroke="#25364c" stroke-width="1.4"/>
-    <rect x="45" y="267" width="6" height="100" rx="3" fill="#28518b"/>
+    <rect x="45" y="239" width="490" height="111" rx="17" fill="#fff" stroke="#25364c" stroke-width="1.4"/>
+    <rect x="45" y="239" width="6" height="111" rx="3" fill="#28518b"/>
   </g>
-  <text class="font small" x="70" y="291" fill="#7b8492">DATA PREPARATION PIPELINE</text>
-  <text class="font" x="70" y="321" font-size="20" font-weight="750" fill="#172235">Inspect → Clean → Transform</text>
-  <text class="font" x="70" y="345" font-size="13" fill="#667080">Quality data. Meaningful features. Ready to learn.</text>
+  <text class="font small" x="70" y="264" fill="#7b8492">BAGGING WORKFLOW</text>
+  <text class="font" x="70" y="295" font-size="20" font-weight="750" fill="#172235">Sample → Train → Aggregate</text>
+  <text class="font" x="70" y="320" font-size="13" fill="#667080">Parallel learners produce one combined prediction.</text>
 
-  <!-- LEFT BOTTOM PROGRESS -->
-  <text class="font small" x="46" y="398" fill="#7b8492">RAW DATA</text>
-  <text class="font small" x="187" y="398" fill="#7b8492">CLEANING</text>
-  <text class="font small" x="340" y="398" fill="#7b8492">FEATURES</text>
-  <text class="font small" x="457" y="398" fill="#7b8492">READY</text>
+  <!-- WORKFLOW TRACK -->
+  <g class="font small" fill="#7b8492">
+    <text x="46" y="382">SAMPLE</text>
+    <text x="175" y="382">TRAIN</text>
+    <text x="307" y="382">COMBINE</text>
+    <text x="446" y="382">PREDICT</text>
+  </g>
+  <path d="M55 413H477" stroke="#9aafd0" stroke-width="2" stroke-linecap="round"/>
+  <path class="flow" d="M55 413H477" stroke="#28518b" stroke-width="2.2" fill="none"/>
+  <circle cx="55" cy="413" r="8" fill="#fff" stroke="#28518b" stroke-width="2.4"/>
+  <circle cx="185" cy="413" r="8" fill="#28518b"/>
+  <circle cx="321" cy="413" r="8" fill="#28518b"/>
+  <circle cx="477" cy="413" r="8" fill="#fff" stroke="#28518b" stroke-width="2.4"/>
+  <circle class="pulse" cx="119" cy="413" r="4" fill="#83b5ff"/>
+  <circle class="pulse" cx="253" cy="413" r="4" fill="#83b5ff"/>
+  <circle class="pulse" cx="399" cy="413" r="4" fill="#83b5ff"/>
 
-  <path d="M55 429H477" stroke="#9aafd0" stroke-width="2" stroke-linecap="round"/>
-  <path class="flow" d="M55 429H477" stroke="#28518b" stroke-width="2.2" fill="none"/>
-  <circle cx="55" cy="429" r="8" fill="#fff" stroke="#28518b" stroke-width="2.4"/>
-  <circle cx="203" cy="429" r="8" fill="#28518b"/>
-  <circle cx="355" cy="429" r="8" fill="#28518b"/>
-  <circle cx="477" cy="429" r="8" fill="#fff" stroke="#28518b" stroke-width="2.4"/>
-  <circle class="pulse" cx="126" cy="429" r="4" fill="#83b5ff"/>
-  <circle class="pulse" cx="278" cy="429" r="4" fill="#83b5ff"/>
-  <circle class="pulse" cx="415" cy="429" r="4" fill="#83b5ff"/>
-
-  <!-- RIGHT: DARK DATA WORKSPACE -->
+  <!-- RIGHT PANEL -->
   <rect x="583" y="38" width="574" height="424" rx="28" fill="url(#navy)" stroke="#28518b" stroke-width="1.8"/>
 
-  <text class="font eyebrow" x="618" y="76" fill="#a8c7f5">DATA LAB / 02</text>
-  <text class="font" x="618" y="107" font-size="25" font-weight="800" fill="#fff">Understand Your Data</text>
-  <text class="font" x="618" y="130" font-size="13" fill="#b7c0cf">From raw dataset to model-ready features</text>
+  <text class="font eyebrow" x="615" y="75" fill="#a8c7f5">ENSEMBLE ENGINE / 03</text>
+  <text class="font" x="615" y="106" font-size="24" font-weight="800" fill="#fff">Bootstrap Aggregating</text>
+  <text class="font" x="615" y="128" font-size="12" fill="#b7c0cf">Independent models · Combined prediction</text>
 
-  <!-- DECORATIVE DATA GRID -->
-  <g opacity=".17" stroke="#80a9ed" stroke-width="1">
-    <path d="M610 152H1130M610 172H1130M610 192H1130M610 212H1130"/>
-    <path d="M650 145V260M700 145V260M750 145V260M800 145V260M850 145V260M900 145V260M950 145V260M1000 145V260M1050 145V260M1100 145V260"/>
+  <!-- ORIGINAL DATASET -->
+  <rect x="614" y="157" width="100" height="103" rx="11" fill="#101c2e" stroke="#426da9" stroke-width="1.3"/>
+  <text class="font small" x="626" y="176" fill="#a9c7f5">DATASET</text>
+  <g fill="#dceaff">
+    <rect x="627" y="189" width="70" height="4" rx="2"/>
+    <rect x="627" y="201" width="53" height="4" rx="2"/>
+    <rect x="627" y="213" width="64" height="4" rx="2"/>
+    <rect x="627" y="225" width="44" height="4" rx="2"/>
+    <rect x="627" y="237" width="61" height="4" rx="2"/>
+    <rect x="627" y="249" width="48" height="4" rx="2"/>
   </g>
 
-  <!-- RAW DATASET TABLE -->
-  <g filter="url(#shadow)">
-    <rect x="614" y="158" width="158" height="120" rx="12" fill="#101c2e" stroke="#426da9" stroke-width="1.3"/>
-    <rect x="614" y="158" width="158" height="27" rx="11" fill="#1b3558"/>
-    <path d="M614 175V185H772V175" fill="#1b3558"/>
-  </g>
-  <text class="font small" x="628" y="176" fill="#dceaff">RAW DATASET</text>
+  <!-- BRANCHING DATA FLOW -->
+  <path d="M714 208H735V174H751M735 208V226H751M735 208V278H751"
+        fill="none" stroke="#557db5" stroke-width="1.5"/>
+  <path class="flow" d="M714 208H735V174H751M735 208V226H751M735 208V278H751"
+        fill="none" stroke="#83b5ff" stroke-width="1.6"/>
+  <path d="M735 208l-4 -5v10z" fill="#83b5ff"/>
 
-  <g stroke="#405878" stroke-width=".8">
-    <path d="M625 203H761M625 222H761M625 241H761M625 260H761"/>
-    <path d="M670 188V269M717 188V269"/>
-  </g>
-  <g fill="#8bb8ff">
-    <rect x="627" y="192" width="25" height="4" rx="2"/>
-    <rect x="676" y="192" width="28" height="4" rx="2"/>
-    <rect x="723" y="192" width="27" height="4" rx="2"/>
-    <rect x="627" y="210" width="34" height="4" rx="2" opacity=".8"/>
-    <rect x="676" y="210" width="23" height="4" rx="2" opacity=".8"/>
-    <rect x="723" y="210" width="32" height="4" rx="2" opacity=".8"/>
-  </g>
-  <g fill="#e4edfc">
-    <circle cx="632" cy="232" r="2.5"/>
-    <circle cx="681" cy="232" r="2.5"/>
-    <circle cx="728" cy="232" r="2.5"/>
-    <circle cx="632" cy="251" r="2.5"/>
-    <circle cx="681" cy="251" r="2.5"/>
-    <circle cx="728" cy="251" r="2.5"/>
+  <!-- BOOTSTRAP SAMPLE CARDS -->
+  <g>
+    <rect x="751" y="153" width="91" height="42" rx="8" fill="#172b47" stroke="#4779c0"/>
+    <rect x="751" y="208" width="91" height="42" rx="8" fill="#172b47" stroke="#4779c0"/>
+    <rect x="751" y="263" width="91" height="42" rx="8" fill="#172b47" stroke="#4779c0"/>
+
+    <text class="font" x="796.5" y="169" text-anchor="middle" font-size="8" font-weight="700" fill="#a9c7f5">SAMPLE 1</text>
+    <text class="font" x="796.5" y="184" text-anchor="middle" font-size="10" fill="#fff">A B A C</text>
+
+    <text class="font" x="796.5" y="224" text-anchor="middle" font-size="8" font-weight="700" fill="#a9c7f5">SAMPLE 2</text>
+    <text class="font" x="796.5" y="239" text-anchor="middle" font-size="10" fill="#fff">B D A B</text>
+
+    <text class="font" x="796.5" y="279" text-anchor="middle" font-size="8" font-weight="700" fill="#a9c7f5">SAMPLE 3</text>
+    <text class="font" x="796.5" y="294" text-anchor="middle" font-size="10" fill="#fff">C A D C</text>
   </g>
 
-  <!-- FLOW TO CLEANING -->
-  <path class="flow" d="M772 216H812" stroke="#83b5ff" stroke-width="2" fill="none"/>
-  <circle class="pulse" cx="792" cy="216" r="4" fill="#fff"/>
+  <!-- CONNECT SAMPLES TO LEARNERS -->
+  <path class="flow" d="M842 174H873M842 229H873M842 284H873"
+        fill="none" stroke="#83b5ff" stroke-width="1.7"/>
+  <circle class="pulse" cx="856" cy="174" r="3" fill="#fff"/>
+  <circle class="pulse" cx="856" cy="229" r="3" fill="#fff"/>
+  <circle class="pulse" cx="856" cy="284" r="3" fill="#fff"/>
 
-  <!-- CLEANING GEAR -->
-  <g class="spin">
-    <circle cx="850" cy="230" r="51" fill="none" stroke="#31588e" stroke-width="1.4" stroke-dasharray="3 7"/>
-    <circle cx="850" cy="179" r="4" fill="#a8c7f5"/>
-    <circle cx="901" cy="230" r="4" fill="#fff"/>
-    <circle cx="850" cy="281" r="4" fill="#83b5ff"/>
-    <circle cx="799" cy="230" r="4" fill="#83b5ff"/>
+  <!-- DECISION TREE 1 -->
+  <g class="float">
+    <g transform="translate(889 158)">
+      <path d="M0 0L-12 13H12Z" fill="url(#blue)" stroke="#c6dcff"/>
+      <path d="M-12 13L-20 26M12 13L20 26" stroke="#a9c7f5" stroke-width="1.5" fill="none"/>
+      <rect x="-26" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
+      <rect x="14" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
+    </g>
   </g>
 
-  <g class="spinback">
-    <ellipse cx="850" cy="230" rx="68" ry="38" fill="none" stroke="#4779c0" stroke-width="1.5" transform="rotate(-25 850 230)"/>
-    <circle cx="850" cy="192" r="4" fill="#fff"/>
-    <circle cx="918" cy="230" r="4" fill="#83b5ff"/>
+  <!-- DECISION TREE 2 -->
+  <g class="float2">
+    <g transform="translate(889 213)">
+      <path d="M0 0L-12 13H12Z" fill="url(#blue)" stroke="#c6dcff"/>
+      <path d="M-12 13L-20 26M12 13L20 26" stroke="#a9c7f5" stroke-width="1.5" fill="none"/>
+      <rect x="-26" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
+      <rect x="14" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
+    </g>
   </g>
 
-  <!-- FILTER / CLEAN ICON -->
-  <g class="float" filter="url(#shadow)">
-    <path d="M827 198H873L863 219V244L837 258V219Z" fill="url(#blue)" stroke="#c6dcff" stroke-width="1.5" stroke-linejoin="round"/>
-    <path d="M837 219H863" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-    <path d="M841 236L847 242L859 229" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- DECISION TREE 3 -->
+  <g class="float">
+    <g transform="translate(889 268)">
+      <path d="M0 0L-12 13H12Z" fill="url(#blue)" stroke="#c6dcff"/>
+      <path d="M-12 13L-20 26M12 13L20 26" stroke="#a9c7f5" stroke-width="1.5" fill="none"/>
+      <rect x="-26" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
+      <rect x="14" y="25" width="12" height="9" rx="2" fill="#28518b" stroke="#83b5ff"/>
+    </g>
   </g>
 
-  <!-- FLOW TO PREPARED DATA -->
-  <path class="flow" d="M922 216H957" stroke="#83b5ff" stroke-width="2" fill="none"/>
-  <circle class="pulse" cx="940" cy="216" r="4" fill="#fff"/>
+  <!-- LEARNER OUTPUTS TO AGGREGATION -->
+  <path d="M915 184H936V226M915 239H936V226M915 294H936V226H953"
+        fill="none" stroke="#557db5" stroke-width="1.5"/>
+  <path class="flow" d="M915 184H936V226M915 239H936V226M915 294H936V226H953"
+        fill="none" stroke="#83b5ff" stroke-width="1.6"/>
+  <circle class="pulse" cx="936" cy="226" r="4" fill="#fff" filter="url(#glow)"/>
 
-  <!-- PREPARED FEATURES CARD -->
-  <g filter="url(#shadow)">
-    <rect x="957" y="158" width="166" height="120" rx="12" fill="#101c2e" stroke="#426da9" stroke-width="1.3"/>
-    <rect x="957" y="158" width="166" height="27" rx="11" fill="#1b3558"/>
-    <path d="M957 175V185H1123V175" fill="#1b3558"/>
+  <!-- AGGREGATION BLOCK: RECTANGULAR, NO ORBIT -->
+  <rect x="953" y="196" width="54" height="60" rx="9" fill="#172b47" stroke="#83b5ff" stroke-width="1.4"/>
+  <g stroke="#e5efff" stroke-width="2.5" stroke-linecap="round">
+    <path d="M966 214H994"/>
+    <path d="M966 226H994"/>
+    <path d="M966 238H994"/>
   </g>
-  <text class="font" x="971" y="176" font-size="10" font-weight="700" fill="#dceaff">PREPARED DATA</text>
+  <path class="flow" d="M1007 226H1022" stroke="#83b5ff" stroke-width="2" fill="none"/>
 
-  <g fill="#85b5ff">
-    <rect x="973" y="199" width="10" height="10" rx="2"/>
-    <rect x="973" y="219" width="10" height="10" rx="2"/>
-    <rect x="973" y="239" width="10" height="10" rx="2"/>
+  <!-- FINAL PREDICTION -->
+  <rect x="1022" y="183" width="108" height="86" rx="12" fill="#101c2e" stroke="#4779c0" stroke-width="1.3"/>
+  <g class="float">
+    <circle cx="1076" cy="207" r="13" fill="#244d83"/>
+    <path d="M1069 207L1074 212L1083 202" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <g stroke="#e1ebfc" stroke-width="2.3" stroke-linecap="round">
-    <path d="M990 204H1105"/>
-    <path d="M990 224H1090"/>
-    <path d="M990 244H1100"/>
-  </g>
-  <g fill="#82b4ff">
-    <rect x="1060" y="198" width="43" height="5" rx="2.5"/>
-    <rect x="1044" y="218" width="45" height="5" rx="2.5"/>
-    <rect x="1058" y="238" width="42" height="5" rx="2.5"/>
-  </g>
+  <text class="font" x="1076" y="235" text-anchor="middle" font-size="9" font-weight="700" fill="#a9c7f5">FINAL</text>
+  <text class="font" x="1076" y="249" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">PREDICTION</text>
+  <text class="font" x="1076" y="261" text-anchor="middle" font-size="7.5" fill="#a9c7f5">VOTE / AVERAGE</text>
 
-  <!-- BOTTOM QUALITY CHECK PANEL -->
-  <rect x="614" y="307" width="509" height="76" rx="13" fill="#101c2e" stroke="#355b91" stroke-width="1.2"/>
-  <text class="font small" x="632" y="329" fill="#a9c7f5">PREPARATION CHECKLIST</text>
+  <!-- STATUS CARD -->
+  <rect x="614" y="329" width="516" height="48" rx="10" fill="#101c2e" stroke="#355b91" stroke-width="1.2"/>
+  <circle cx="634" cy="352" r="7" fill="#244d83"/>
+  <path d="M630 352L633 355L638 348" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+  <text class="font small" x="649" y="349" fill="#a9c7f5">ENSEMBLE STATUS</text>
+  <text class="font" x="649" y="365" font-size="12" font-weight="800" fill="#fff">MULTIPLE LEARNERS COMBINED</text>
 
-  <g transform="translate(634 349)">
-    <circle r="8" fill="#244d83"/>
-    <path d="M-4 0L-1 3L4 -3" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
-  </g>
-  <text class="font" x="649" y="353" font-size="11" fill="#e8f0ff">Missing Values</text>
-
-  <g transform="translate(792 349)">
-    <circle r="8" fill="#244d83"/>
-    <path d="M-4 0L-1 3L4 -3" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
-  </g>
-  <text class="font" x="807" y="353" font-size="11" fill="#e8f0ff">Duplicates</text>
-
-  <g transform="translate(919 349)">
-    <circle r="8" fill="#244d83"/>
-    <path d="M-4 0L-1 3L4 -3" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
-  </g>
-  <text class="font" x="934" y="353" font-size="11" fill="#e8f0ff">Feature Prep</text>
-
-  <text class="font" x="614" y="421" font-size="10" letter-spacing="1.1" fill="#8398b8">DATA PROFILING · CLEANING · FEATURE ENGINEERING</text>
-  <circle class="pulse" cx="1119" cy="420" r="3.5" fill="#8db6f4" filter="url(#glow)"/>
-
-  <!-- SMALL FLOATING DATA PARTICLES -->
-  <circle class="pulse" cx="795" cy="149" r="3" fill="#fff"/>
-  <circle class="pulse" cx="934" cy="294" r="3" fill="#83b5ff"/>
-  <circle class="shine" cx="1100" cy="292" r="2.5" fill="#fff"/>
-  <circle class="shine" cx="782" cy="290" r="2.5" fill="#83b5ff"/>
+  <!-- FOOTER -->
+  <text class="font" x="614" y="419" font-size="9" letter-spacing=".8" fill="#8398b8">BOOTSTRAP SAMPLES · DECISION TREES · AGGREGATION</text>
+  <path class="flow" d="M1005 419H1125" fill="none" stroke="#4779c0" stroke-width="1.5"/>
+  <circle class="pulse" cx="1125" cy="419" r="3" fill="#83b5ff" filter="url(#glow)"/>
 </svg>
