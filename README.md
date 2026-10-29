@@ -1,6 +1,9 @@
 # 🎓 Smart Outcome Predictor
 
-This project is built on ensemble learning in supervised machine learning. It covers bagging, boosting, voting and stacking, compares how each family of models combines many learners into one strong predictor, and applies all of them to a real dataset of online learning platform students to predict both course completion and final scores.
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/2bd9e6a1-6d8c-4e2b-ad67-1ca1723762d7" />
+
+
 
 ---
 
@@ -96,6 +99,12 @@ The task is to prepare the data, build bagging models, implement and analyse **A
 ## 🧪 Part B: Dataset Understanding & Preparation
 
 
+
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/fdf28c7d-beed-400b-b8cd-8a7015f43f27" />
+
+
+
 ### 6. Identify features and target variables for both problems.
 
 ```python
@@ -147,6 +156,10 @@ return X_train, X_test
 
 ## 📦 Part C: Bagging (Bootstrap Aggregating)
 
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/0eb2d9ab-73db-4a9d-aecc-02bad95050ac" />
+
+
 ### 9. Implement Bagging Classifier for course completion prediction.
 
 ```python
@@ -194,6 +207,16 @@ print("Bagging Accuracy:", accuracy_score(y_test_class, bagging.predict(X_test_c
 ---
 
 ## ⚡️ Part D: Boosting Algorithms
+
+
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/e9115f7f-a776-4b81-9722-9cc4d2599663" />
+
+
+
+
+
+
 
 ## AdaBoost
 
@@ -347,6 +370,17 @@ print(name, "Accuracy:", accuracy_score(y_test_class, model.predict(X_test_class
 
 ## 💼 Part E: Voting & Stacking Ensembles
 
+
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/b82824c0-c70f-41d8-a216-c17e47bc06ca" />
+
+
+
+
+
+
+
+
 ### 24. Implement Voting Classifier using multiple base classifiers.
 
 ```python
@@ -426,6 +460,18 @@ print("R2 Score:", r2_score(y_test_reg, pred))
 ---
 
 ## 📊 Part F: Model Evaluation & Comparison
+
+
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/fb58fd7c-5c6a-4bd4-8c22-ddf3bac59864" />
+
+
+
+
+
+
+
+
 
 
 ### 28. Evaluate classification models using Accuracy, Precision, Recall, F1-Score and ROC-AUC.
